@@ -4,6 +4,6 @@ node {
   
   def projectHome = pwd()
   stage 'build and unit test'
-  chmod +x "${projectHome}/gradlew"
+  sh "chmod +x ${projectHome}/gradlew"
   sh "${projectHome}/gradlew clean test"
 }
